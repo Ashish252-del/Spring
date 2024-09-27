@@ -23,7 +23,7 @@ class ClassA{
 class CLassB {
    private ClassA classA;
    public CLassB (ClassA classA){
-       // logic
+       // logic constructor injections
        System.out.println("Some initialization logic");
        this.classA = classA;
    }

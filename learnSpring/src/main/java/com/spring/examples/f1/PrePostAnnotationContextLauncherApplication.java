@@ -43,6 +43,7 @@ public class PrePostAnnotationContextLauncherApplication {
     public static void main(String[] args) {
       try(var context = new AnnotationConfigApplicationContext(PrePostAnnotationContextLauncherApplication.class)){
           Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
+          System.out.println("hello testing    =======");
       }
     }
 }

@@ -1,0 +1,40 @@
+step 1 -> Follow learnSpring.game
+Initially we were making separate file for configuration but as of now we are making same file as
+configuration file by using annotation @configuration
+and component scan will scan whole beans of given path package
+
+When you call context.getBean(GamingConsole.class), you are asking Spring to provide a bean that matches the GamingConsole interface.
+Since GamingConsole is an interface, Spring will look for a class that:
+Implements the GamingConsole interface.
+Is annotated with @Component (or a similar stereotype annotation) to be registered as a bean in the Spring context.
+How Spring Resolves the Bean:-->
+Interface Lookup: You request a bean by its interface (GamingConsole.class), so Spring will try to find a bean whose class implements this interface.
+
+Component Scan: During the component scan (because of @ComponentScan("com.spring.learnSpring.game")), Spring will have registered any class in that
+package that implements GamingConsole and is annotated with @Component.
+
+Bean Injection: Spring will return the appropriate implementation of the GamingConsole interface.
+
+Note --> @Qualifier is used during dependency injection, not for getBean().
+Note --> Yes, that's correct! By default, the name of a bean in Spring is derived
+         from the class name of the annotated class with the first letter converted to lowercase.
+
+step 2 --> Follow examples folder
+Look in this step basically we have talked different way of injections and annotations that can be used to
+do dependency injection like constructor injection , field injection , getter and setter injection
+when we have more than one interface implementations then we can use qualifier for injections
+in examples till c1 is only these
+
+Scope of beans -->
+1. Normal --> spring will give same instance
+2. Proto  --> spring will give new instance everytime
+
+PostConstructor and PreDestroy -->
+follow f1
+
+cdi annotations -->
+look component is generic for beans but but but for specific beans we have cdi annotations
+
+xml Configuration -->
+initially people were using xml configuration for writing beans like as of now we are just using annotation but earlier people were in one file
+follow h1

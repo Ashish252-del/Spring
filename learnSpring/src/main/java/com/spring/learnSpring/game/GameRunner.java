@@ -13,7 +13,7 @@ public class GameRunner {
 
     GamingConsole game;
     public GameRunner(@Qualifier("MarioGameQualifier") // it is constructor base dependencies injection
-                      GamingConsole game) {
+                      GamingConsole game) { // since mario game is already in context as bean spring will get that
         this.game = game;
    }
     public void run() {

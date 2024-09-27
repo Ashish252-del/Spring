@@ -14,7 +14,7 @@ public class MarioGame implements GamingConsole{
         System.out.println("Jump");
     }
     public void  down (){
-        System.out.println("Go into a hole");
+        System.out.println("Go into a hole it is mario ");
     }
     public void  left (){
         System.out.println("Go back");

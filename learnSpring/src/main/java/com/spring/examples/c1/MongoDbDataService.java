@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 public class MongoDbDataService implements DataService{
     @Override
     public int [] retriveData(){
+        System.out.println("Running MongoDbDataService =======>");
         return new int []{1,5,1,4,7};
     }
 }
